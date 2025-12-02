@@ -1,5 +1,3 @@
-# echochat-anonymous-messenger-app
-🔒 Zero-Knowledge Messenger — End-to-end encrypted, no server storage, no metadata. True privacy for Android &amp; iOS.
 # EchoChat - Zero-Knowledge Messenger
 
 <p align="center">
@@ -17,6 +15,7 @@
   <a href="https://tta.lu/echochat.html">🌐 Website</a> •
   <a href="#download">📱 Download</a> •
   <a href="#how-it-works">🔐 How it Works</a> •
+  <a href="#server-privacy--security">🛡️ Server Security</a> •
   <a href="#support-the-project">💜 Support</a>
 </p>
 
@@ -41,7 +40,7 @@ EchoChat is a **zero-knowledge messenger** designed for those who take privacy s
 📥 **[Download APK](https://github.com/omgnoe/echochat/releases/latest)** (Direct download, no Google Play required)
 
 ### iOS
-🍎 **[Join TestFlight Beta](https://testflight.apple.com/join/SPk1hX8S)**
+🍎 **[Download on App Store](https://apps.apple.com/us/app/echochat-secure-messenger/id6755791156)**
 
 ---
 
@@ -121,7 +120,7 @@ server/
 - **Zero persistence** — No database, no file storage
 - **RAM-only sessions** — Everything lives in memory
 - **Auto-cleanup** — Sessions expire after 3 days
-- **Minimal logging** — Only connection events, no content
+- **Minimal logging** — Only errors, no access logs
 
 ---
 
@@ -145,6 +144,58 @@ server/
 - 🔐 Local data encrypted with AES-256
 - 🔐 Friend list encrypted at rest
 - 🔐 Session history encrypted locally
+
+---
+
+## Server Privacy & Security
+
+We believe in full transparency about how we protect your privacy. Here's what our relay server does — and doesn't do.
+
+### 🚫 What We DON'T Collect
+
+| Data | Status |
+|------|--------|
+| IP Addresses | ❌ Not logged |
+| Access Logs | ❌ Disabled |
+| Message Content | ❌ Encrypted, unreadable |
+| User Identities | ❌ No accounts, no tracking |
+| Metadata | ❌ No timestamps per user |
+| Device Fingerprints | ❌ Not collected |
+| Chat Partners | ❌ No relationship mapping |
+
+### 🛡️ Server Hardening
+
+| Protection | Implementation |
+|------------|----------------|
+| **Encryption** | TLS 1.2/1.3 only — legacy protocols disabled |
+| **DDoS Protection** | Cloudflare-proxied infrastructure |
+| **Storage** | RAM-only — no database, no persistence |
+| **Session Cleanup** | Automatic purge after 3 days inactivity |
+| **IP Anonymization** | Backend never receives real client IPs |
+| **Brute-Force Protection** | Automated blocking of malicious attempts |
+| **Access Logging** | Completely disabled — nothing to subpoena |
+
+### 🔐 Infrastructure Design
+
+```
+┌──────────┐      ┌─────────────────┐      ┌──────────────┐
+│   User   │ ───► │   Cloudflare    │ ───► │ Relay Server │
+└──────────┘      │                 │      │              │
+                  │ • DDoS Shield   │      │ • No Logs    │
+                  │ • IP Hidden     │      │ • RAM Only   │
+                  │ • TLS 1.3       │      │ • Auto-Purge │
+                  └─────────────────┘      └──────────────┘
+```
+
+### 📜 Our Privacy Promise
+
+1. **We cannot read your messages** — End-to-end encrypted with keys only you control
+2. **We cannot identify you** — No IPs logged, no accounts, no tracking
+3. **We cannot comply with data requests** — No data exists to hand over
+4. **We cannot sell your data** — There's nothing to sell
+5. **We cannot be compromised meaningfully** — Even with server access, messages remain encrypted
+
+> *"The best way to protect data is to never collect it."*
 
 ---
 
@@ -206,7 +257,8 @@ This is version 1.0 — the first public release!
 
 - 🌐 **Website:** [https://tta.lu/echochat.html](https://tta.lu/echochat.html)
 - 📱 **Android APK:** [Releases](https://github.com/omgnoe/echochat/releases)
-- 🍎 **iOS TestFlight:** [Join Beta](https://testflight.apple.com/join/SPk1hX8S)
+- 🍎 **iOS App Store:** [Download](https://apps.apple.com/us/app/echochat-secure-messenger/id6755791156)
+- 📊 **Server Status:** [Status Page](https://stats.uptimerobot.com/FXUJMYs59c)
 
 ---
 
