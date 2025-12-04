@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Android%20%7C%20iOS-blue?style=for-the-badge" alt="Platform">
   <img src="https://img.shields.io/badge/Encryption-X25519%20%2B%20AES--256--GCM-green?style=for-the-badge" alt="Encryption">
-  <img src="https://img.shields.io/badge/Version-1.0.0-cyan?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/Version-1.2.0-cyan?style=for-the-badge" alt="Version">
   <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License">
 </p>
 
